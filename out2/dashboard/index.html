@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apogee — pre-token protocols ranked by implied value</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#board">Skip to the board</a>
+<header class="top">
+  <div class="brand">
+    <h1>Apogee</h1>
+    <p class="tag">A token launch radar: every pre-token protocol priced off the tokens that already trade, its number taken apart on every row, and a dated, costed, per-mechanism farm plan to act on.</p>
+  </div>
+  <p class="asof" id="asof"></p>
+</header>
+<main id="board" tabindex="-1">
+  <section class="kpis" id="kpis" aria-label="Key figures"></section>
+  <p class="strip" id="strip">Model kept by walk-forward over 29 variants: two-segment size curve, WF 0.4399, blind 0.5615 &middot; 197 protocols priced off 128 traded comps &middot; full validation table below the board.</p>
+  <section class="panel detail" id="detail" hidden aria-label="Protocol detail"></section>
+  <section class="controls" aria-label="Board controls">
+    <label>Search <input id="q" type="search" placeholder="Protocol name or slug" autocomplete="off"></label>
+    <label>Category <select id="cat"><option value="all">All categories</option></select></label>
+    <label>Verdict <select id="verdict">
+      <option value="all">All verdicts</option>
+      <option value="farm">farm</option>
+      <option value="thin">thin</option>
+      <option value="skip">skip</option>
+    </select></label>
+    <label class="check"><input id="watch" type="checkbox"> Watchlist only</label>
+    <span class="count" id="count"></span>
+  </section>
+  <section class="tablewrap">
+    <table id="table">
+      <thead><tr>
+        <th data-sort="rank">Rank</th>
+        <th data-sort="name">Protocol</th>
+        <th data-sort="category">Category</th>
+        <th data-sort="tvl_usd">TVL</th>
+        <th data-sort="change_7d">7d</th>
+        <th data-sort="age_years">Clock</th>
+        <th data-sort="implied_value_usd">Implied value</th>
+        <th data-sort="implied_p10">Band p10–p90</th>
+        <th data-sort="rank_lo">Ranks</th>
+        <th data-sort="net">Net</th>
+        <th data-sort="usd_per_hour">$/hour</th>
+        <th data-sort="verdict">Verdict</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+  <p class="hint">Click a row for its detail view: how its number is built, the traded tokens it was priced against, and its dated farm plan. Sort by clicking a column header. Share a protocol with #p=&lt;slug&gt;, a category with #cat=&lt;category&gt;.</p>
+  <section class="panel" id="validation" aria-label="Validation"></section>
+  <section class="panel" id="method" aria-label="Methodology"></section>
+  <footer><p>Apogee reads one sealed snapshot and nothing else. Implied values are the model's claim, not a prediction that a token will launch. A protocol is shown as pre-token when its record carries no token — the record is not proof it has none. The no-token clock is shown on every row; the walk-forward test, not preference, decided it is not priced into the value (see Validation). Gas figures are November 2026 estimates; check the chain's fee tracker before acting.</p></footer>
+</main>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

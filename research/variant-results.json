@@ -1,0 +1,255 @@
+{
+  "as_of": "2026-11-14",
+  "comps": 128,
+  "comps_with_listed_at": 95,
+  "n_wf_predictions": 48,
+  "n_blind_predictions": 160,
+  "winner": "I",
+  "selected_terms": [
+    "growth"
+  ],
+  "spec_c": {
+    "terms": [
+      "growth"
+    ],
+    "catOffset": false,
+    "catSlope": false,
+    "ridge": false,
+    "method": "ols",
+    "piecewise": false
+  },
+  "scores": [
+    {
+      "variant": "A",
+      "label": "Median multiple per category",
+      "wf_median": 0.7208006666689002,
+      "wf_within2": 0.1875,
+      "blind_median": 0.6888060179017166,
+      "blind_within2": 0.19375
+    },
+    {
+      "variant": "B",
+      "label": "Size curve (log-log OLS)",
+      "wf_median": 0.47970773874679207,
+      "wf_within2": 0.3125,
+      "blind_median": 0.507279035030157,
+      "blind_within2": 0.3625
+    },
+    {
+      "variant": "C",
+      "label": "Size curve + walk-forward term selection",
+      "wf_median": 0.446977054817455,
+      "wf_within2": 0.22916666666666666,
+      "blind_median": 0.5554286533594182,
+      "blind_within2": 0.3375
+    },
+    {
+      "variant": "D",
+      "label": "Ridge multi-factor log-log",
+      "wf_median": 0.5507357113885756,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5267625098665545,
+      "blind_within2": 0.3375
+    },
+    {
+      "variant": "E",
+      "label": "Median (L1) regression on C’s terms",
+      "wf_median": 0.519943390998777,
+      "wf_within2": 0.2916666666666667,
+      "blind_median": 0.5583417009016296,
+      "blind_within2": 0.33125
+    },
+    {
+      "variant": "F",
+      "label": "Huber regression on C’s terms",
+      "wf_median": 0.5181886605662522,
+      "wf_within2": 0.3125,
+      "blind_median": 0.5901208311029214,
+      "blind_within2": 0.35
+    },
+    {
+      "variant": "G",
+      "label": "Trimmed refit (worst 5% dropped) on C’s terms",
+      "wf_median": 0.48261197153244595,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5786378434710366,
+      "blind_within2": 0.325
+    },
+    {
+      "variant": "H",
+      "label": "Similarity-weighted local fit (nearest traded neighbours)",
+      "wf_median": 0.4497417444197831,
+      "wf_within2": 0.3125,
+      "blind_median": 0.5647329728872705,
+      "blind_within2": 0.3375
+    },
+    {
+      "variant": "I",
+      "label": "Two-segment size curve + growth",
+      "wf_median": 0.4398517343032178,
+      "wf_within2": 0.2916666666666667,
+      "blind_median": 0.5614589790637434,
+      "blind_within2": 0.31875
+    },
+    {
+      "variant": "J",
+      "label": "C + no-token clock in log-days",
+      "wf_median": 0.6520253225056076,
+      "wf_within2": 0.25,
+      "blind_median": 0.556993758987459,
+      "blind_within2": 0.3125
+    },
+    {
+      "variant": "K",
+      "label": "C + shrunk category slopes",
+      "wf_median": 0.526865639337065,
+      "wf_within2": 0.2916666666666667,
+      "blind_median": 0.5887386201744778,
+      "blind_within2": 0.3125
+    },
+    {
+      "variant": "L",
+      "label": "Two-segment size curve + growth + clock (log-days)",
+      "wf_median": 0.6541068336966469,
+      "wf_within2": 0.25,
+      "blind_median": 0.5635065033145814,
+      "blind_within2": 0.30625
+    },
+    {
+      "variant": "M",
+      "label": "Two-segment size curve + growth + clock (years)",
+      "wf_median": 0.592250799422545,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5568615542292821,
+      "blind_within2": 0.3
+    },
+    {
+      "variant": "N1",
+      "label": "Two-segment + growth, recency half-life 180d",
+      "wf_median": 0.508326713072941,
+      "wf_within2": 0.2916666666666667,
+      "blind_median": 0.6140657517032824,
+      "blind_within2": 0.2875
+    },
+    {
+      "variant": "N2",
+      "label": "Two-segment + growth, recency half-life 365d",
+      "wf_median": 0.5446632791050763,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5523499148579991,
+      "blind_within2": 0.3125
+    },
+    {
+      "variant": "N3",
+      "label": "Two-segment + growth, recency half-life 730d",
+      "wf_median": 0.49678053586368254,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.4865798458669608,
+      "blind_within2": 0.2625
+    },
+    {
+      "variant": "O",
+      "label": "Two-knot size curve + growth",
+      "wf_median": 0.5622563533578653,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5298566689092774,
+      "blind_within2": 0.30625
+    },
+    {
+      "variant": "P",
+      "label": "Two-knot size curve + growth, recency 365d",
+      "wf_median": 0.5921730069063575,
+      "wf_within2": 0.22916666666666666,
+      "blind_median": 0.5536851372114553,
+      "blind_within2": 0.31875
+    },
+    {
+      "variant": "Q",
+      "label": "Two-segment + growth + growth-by-segment",
+      "wf_median": 0.4741702883501766,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5723017070469596,
+      "blind_within2": 0.29375
+    },
+    {
+      "variant": "R",
+      "label": "Two-knot + growth + growth-by-segment",
+      "wf_median": 0.5731203726164318,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5678182701297252,
+      "blind_within2": 0.2875
+    },
+    {
+      "variant": "S",
+      "label": "Two-segment + growth + category offsets",
+      "wf_median": 0.4817182531428905,
+      "wf_within2": 0.25,
+      "blind_median": 0.5809333113141615,
+      "blind_within2": 0.31875
+    },
+    {
+      "variant": "T",
+      "label": "Two-segment + growth + offsets, recency 365d",
+      "wf_median": 0.5112842853552166,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5713746878429449,
+      "blind_within2": 0.35
+    },
+    {
+      "variant": "U",
+      "label": "Two-segment + growth + chains",
+      "wf_median": 0.47443559231817156,
+      "wf_within2": 0.3125,
+      "blind_median": 0.5691487926108092,
+      "blind_within2": 0.325
+    },
+    {
+      "variant": "W",
+      "label": "Two-segment + growth, ridge",
+      "wf_median": 0.43984505870706325,
+      "wf_within2": 0.2916666666666667,
+      "blind_median": 0.5615695274009069,
+      "blind_within2": 0.31875
+    },
+    {
+      "variant": "X",
+      "label": "Two-segment + growth, trimmed refit",
+      "wf_median": 0.49116563899820775,
+      "wf_within2": 0.2916666666666667,
+      "blind_median": 0.5814021712529547,
+      "blind_within2": 0.3
+    },
+    {
+      "variant": "Y",
+      "label": "Two-segment + growth, median (L1) regression",
+      "wf_median": 0.5260386060583775,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.566346367622613,
+      "blind_within2": 0.33125
+    },
+    {
+      "variant": "Z",
+      "label": "Two-segment + growth, Huber regression",
+      "wf_median": 0.5138675157781685,
+      "wf_within2": 0.3333333333333333,
+      "blind_median": 0.5775408770401378,
+      "blind_within2": 0.35
+    },
+    {
+      "variant": "K1",
+      "label": "Two-segment (hinge at 40th pct) + growth",
+      "wf_median": 0.49021825212123193,
+      "wf_within2": 0.22916666666666666,
+      "blind_median": 0.5521830461378565,
+      "blind_within2": 0.33125
+    },
+    {
+      "variant": "K2",
+      "label": "Two-segment (hinge at 60th pct) + growth",
+      "wf_median": 0.47073740980936574,
+      "wf_within2": 0.2708333333333333,
+      "blind_median": 0.5896743335955548,
+      "blind_within2": 0.325
+    }
+  ]
+}
